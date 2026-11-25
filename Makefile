@@ -51,13 +51,13 @@ ARCH ?= amd64
 ALL_ARCH := amd64 arm arm64 ppc64le
 # Set default base image dynamically for each arch
 ifeq ($(ARCH),amd64)
-	BASEIMAGE?=alpine
+	BASEIMAGE?=alpine:latest
 endif
 ifeq ($(ARCH),arm)
 	BASEIMAGE?=arm32v6/alpine
 endif
 ifeq ($(ARCH),arm64)
-	BASEIMAGE?=arm64v8/alpine
+	BASEIMAGE?=alpine:latest
 endif
 ifeq ($(ARCH),ppc64le)
 	BASEIMAGE?=ppc64le/alpine
